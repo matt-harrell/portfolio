@@ -28,7 +28,8 @@ const config: GatsbyConfig = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  },"gatsby-plugin-postcss"]
+  },"gatsby-plugin-postcss"],
+  trailingSlash: "never",
 };
 
 export default config;
