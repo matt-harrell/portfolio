@@ -9,14 +9,19 @@ function NavBar() {
     const location = useLocation();
 
 useEffect(() => {
-    setRoute(window.location.pathname.split('/')[1])
+    if (window.location.href.includes('#')){
+        
+        setRoute(window.location.href.split('#')[1])
+    }else{
+        setRoute(window.location.href.split('/')[1])
+    }
 }, [location])
 
     const navItems = [
         ['About', '/'],
-        ['Projects', '/projects'],
+        ['Projects', '#projects'],
         ['Resume', '/resume'],
-        ['Contact', '/contact'],
+        ['Contact', '#contact'],
     ]
 
     return (

@@ -5,7 +5,7 @@ import NavBar from "./NavBar/NavBar";
 const Layout: React.FC<PropsWithChildren> = ({ children }) => {
     return (
         <>
-            <header>
+            <header className="sticky top-0">
                 <NavBar/>
             </header>
             {children}
