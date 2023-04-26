@@ -1,4 +1,4 @@
-// nav bar container componet 
+// todo pass nav logic close logic from layout to navbar comp
 import React, { useEffect, useState } from 'react'
 import NavBarComp from './NavBarComp'
 import { globalHistory, useLocation } from '@reach/router'
@@ -29,6 +29,8 @@ function NavBar() {
         <NavBarComp
             navItems={navItems}
             route={route}
+            isNavOpen={isNavOpen}
+            handleClick={handleClick}
         />
     )
 }
