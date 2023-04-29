@@ -1,9 +1,15 @@
 // todo pass nav logic close logic from layout to navbar comp
 import React, { useEffect, useState } from 'react'
 import NavBarComp from './NavBarComp'
-import { globalHistory, useLocation } from '@reach/router'
+import { useLocation } from '@reach/router'
 
-function NavBar() {
+interface NavBarProps {
+    isNavOpen:boolean;
+    handleClick:(isOpen:boolean) => void;
+}
+
+
+function NavBar({isNavOpen,handleClick}:NavBarProps) {
 
     const [route, setRoute] = useState<string>('');
     const location = useLocation();
