@@ -32,10 +32,13 @@ const IndexPage: React.FC<PageProps> = () => {
     
     if (about > middleOfScreen) {
       dispatch({type: 'update',payload: ''})
+      window.history.pushState('/','','/');
     } else if(projects < middleOfScreen && projects > ((-1*window.innerHeight)/2)){
       dispatch({type: 'update',payload: 'projects'})
+      window.history.pushState('/#projects','','/#projects');
     }else {
       dispatch({type: 'update',payload: 'contact'})
+      window.history.pushState('/#contact','','/#contact');
     }
   }
 
