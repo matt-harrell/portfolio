@@ -1,7 +1,8 @@
 // todo pass nav logic close logic from layout to navbar comp
 import React, { useEffect, useState } from 'react'
 import NavBarComp from './NavBarComp'
-import { useLocation } from '@reach/router'
+import { useLocation,createHistory } from '@reach/router'
+import { useNavDispatch } from '../NavContext';
 
 interface NavBarProps {
     isNavOpen:boolean;
@@ -13,14 +14,21 @@ function NavBar({isNavOpen,handleClick}:NavBarProps) {
 
     const [route, setRoute] = useState<string>('');
     const location = useLocation();
+    const dispatch = useNavDispatch();
 
     useEffect(() => {
         if (window.location.href.includes('#')) {
             const url = window.location.href.split('#');
-            setRoute(url[url.length - 1])
+            dispatch({
+                type:'update',
+                payload:url[url.length - 1]
+            })
         } else {
             const url = window.location.href.split('/');
-            setRoute(url[url.length - 1])
+            dispatch({
+                type:'update',
+                payload:url[url.length - 1]
+            })
         }
     }, [location])
 
@@ -34,7 +42,6 @@ function NavBar({isNavOpen,handleClick}:NavBarProps) {
     return (
         <NavBarComp
             navItems={navItems}
-            route={route}
             isNavOpen={isNavOpen}
             handleClick={handleClick}
         />
