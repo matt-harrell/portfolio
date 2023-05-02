@@ -1,5 +1,5 @@
 import * as React from "react"
-import { HeadFC, PageProps, navigate } from "gatsby"
+import { HeadFC, PageProps } from "gatsby"
 import Layout from "../components/Layout"
 import { useEffect, useRef } from "react"
 import { useNavDispatch } from "../components/NavContext"
