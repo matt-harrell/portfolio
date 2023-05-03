@@ -2,7 +2,7 @@ import * as React from "react"
 import { HeadFC, PageProps } from "gatsby"
 import Layout from "../components/Layout"
 import { useEffect, useRef } from "react"
-import { useNavDispatch } from "../components/NavContext"
+import { NAV_ACTIONS, useNavDispatch } from "../components/NavContext"
 
 
 
@@ -31,11 +31,11 @@ const IndexPage: React.FC<PageProps> = () => {
     const about = ProjectSection.current?.getBoundingClientRect().y || 0;
     
     if (about > middleOfScreen) {
-      dispatch({type: 'update',payload: ''})
+      dispatch({type: NAV_ACTIONS.UPDATE,payload: ''})
     } else if(projects < middleOfScreen && projects > ((-1*window.innerHeight)/2)){
-      dispatch({type: 'update',payload: 'projects'})
+      dispatch({type: NAV_ACTIONS.UPDATE,payload: 'projects'})
     }else {
-      dispatch({type: 'update',payload: 'contact'})
+      dispatch({type: NAV_ACTIONS.UPDATE,payload: 'contact'})
     }
   }
 
