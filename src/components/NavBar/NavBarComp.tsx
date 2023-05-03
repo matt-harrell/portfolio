@@ -1,6 +1,7 @@
 import { Link } from "gatsby-link";
 import React from "react";
 import { useNav } from "../NavContext";
+import { Link as ScrollLink, scroller } from "react-scroll";
 
 interface NavBarCompProps {
     navItems: string[][];
@@ -29,7 +30,10 @@ const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick 
             >
             {navItems.map(([title, url]) => (
                 <div key={title} className="lg:basis-60 max-w-lg text-center py-3">
-                    <Link to={url} className="text-xl">{title}</Link>
+                    {url.includes("#") && window.location.pathname === '/' ? 
+                        <ScrollLink to={url.replace('/','').replace('#','')} smooth={true} duration={300} className="text-xl cursor-pointer">{title}</ScrollLink> :
+                        <Link to={url} className="text-xl">{title}</Link>
+                    }
                     {url.replace('/', '').replace("#", '') === route?.route &&
                         <div className="w-11 h-1 bg-light-blue mx-auto rounded"></div>
                     }
