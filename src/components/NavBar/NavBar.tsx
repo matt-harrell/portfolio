@@ -1,8 +1,8 @@
 // todo pass nav logic close logic from layout to navbar comp
 import React, { useEffect, useState } from 'react'
 import NavBarComp from './NavBarComp'
-import { useLocation,createHistory } from '@reach/router'
-import { useNavDispatch } from '../NavContext';
+import { useLocation } from '@reach/router'
+import { useNav, useNavDispatch } from '../NavContext';
 
 interface NavBarProps {
     isNavOpen:boolean;
@@ -11,10 +11,11 @@ interface NavBarProps {
 
 
 function NavBar({isNavOpen,handleClick}:NavBarProps) {
-
-    const [route, setRoute] = useState<string>('');
     const location = useLocation();
     const dispatch = useNavDispatch();
+    const route = useNav();
+    const [isHover,setIsHover] = useState(false);
+    const [hoverLinkTarget,setHoverLinkTarget] = useState<null | string>(null);
 
     useEffect(() => {
         if (window.location.href.includes('#')) {
@@ -39,11 +40,34 @@ function NavBar({isNavOpen,handleClick}:NavBarProps) {
         ['Contact', '/#contact'],
     ]
 
+    const matchRoute = (url:string):string => {
+        if (url.replace('/', '').replace("#", '') === route?.route) {
+            return ' opacity-100'
+        } else {
+            return ' opacity-0'
+        }
+    }
+
+    const handleMouseEnter = (url:string| null = null) => {
+        setIsHover(true);
+        setHoverLinkTarget(url)
+    }
+
+    const handleMouseLeave = () => {
+        setIsHover(false);
+        setHoverLinkTarget(null)
+    }
+
     return (
         <NavBarComp
             navItems={navItems}
             isNavOpen={isNavOpen}
             handleClick={handleClick}
+            matchRoute={matchRoute}
+            isHover={isHover}
+            handleMouseEnter={handleMouseEnter}
+            hoverLinkTarget={hoverLinkTarget}
+            handleMouseLeave={handleMouseLeave}
         />
     )
 }

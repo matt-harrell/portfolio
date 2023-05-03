@@ -1,28 +1,23 @@
 import { Link } from "gatsby-link";
 import React from "react";
-import { useNav } from "../NavContext";
-import { Link as ScrollLink, scroller } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 interface NavBarCompProps {
     navItems: string[][];
     isNavOpen:boolean;
     handleClick:(isOpen:boolean) => void;
+    matchRoute: (url: string) => string;
+    handleMouseEnter: (url:string | null) => void;
+    isHover:boolean;
+    hoverLinkTarget:string | null;
+    handleMouseLeave:() => void;
 }
 
 // presentional component for the nav bar
 // TODO: create nav links
 // have it so blue line moves when new page/url is selected
-const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick }: NavBarCompProps) => {
+const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick,matchRoute,handleMouseEnter,isHover,hoverLinkTarget,handleMouseLeave }: NavBarCompProps) => {
     
-    const route = useNav();
-
-    const matchRoute = (url:string):string => {
-        if (url.replace('/', '').replace("#", '') === route?.route) {
-            return ' opacity-100'
-        } else {
-            return ' opacity-0'
-        }
-    }
 
     return (
         <nav className="bg-tan mb-3">
@@ -46,10 +41,15 @@ const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick 
             {navItems.map(([title, url]) => (
                 <div key={title} className="lg:basis-60 max-w-lg text-center py-3">
                     {url.includes("#") && window.location.pathname === '/' ? 
-                        <ScrollLink to={url.replace('/','').replace('#','')} smooth={true} duration={300} className="text-xl cursor-pointer">{title}</ScrollLink> :
-                        <Link to={url} className="text-xl">{title}</Link>
+                        <ScrollLink to={url.replace('/','').replace('#','')} smooth={true} duration={300} className="text-xl cursor-pointer" onMouseEnter={() => handleMouseEnter(url)} onMouseLeave={handleMouseLeave}>{title}</ScrollLink> :
+                        <Link to={url} className="text-xl" onMouseEnter={() => handleMouseEnter(url)} onMouseLeave={handleMouseLeave}>{title}</Link>
                     }
-                    <div className={'w-11 h-1 bg-light-blue mx-auto rounded transition-opacity ease-out duration-300' + matchRoute(url)}></div>
+                    <div 
+                        className={'w-11 h-1 bg-light-blue mx-auto rounded transition-opacity ease-out duration-300' + 
+                                    (isHover && url === hoverLinkTarget && matchRoute(url) !== ' opacity-100' ? ' opacity-50' : matchRoute(url))
+                                }
+                    >
+                    </div>
                 </div>
             ))}
             </div>
