@@ -44,10 +44,10 @@ const IndexPage: React.FC<PageProps> = () => {
       <h1 id='about' className="text-3xl font-bold underline h-screen" ref={aboutSection}>
         Hello world!
       </h1>
-      <div id="projects" className="h-screen pt-14" ref={ProjectSection}>
+      <div id="projects" className="h-screen pt-16" ref={ProjectSection}>
         projects
       </div>
-      <div id="contact" className="h-screen pt-14">
+      <div id="contact" className="h-screen pt-16">
         contact
       </div>
     </Layout>
