@@ -6,7 +6,7 @@ need to create a context to handle route state
 route state manages where blue bar appears under the nav
 */
 
-const NavContext = createContext<initialStateType | null>(null);
+const NavContext = createContext<initialStateType>(null!);
 export const NavContextDispatch = createContext<Dispatch<any>>(null!);
 
 interface initialStateType {

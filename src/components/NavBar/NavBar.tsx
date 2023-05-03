@@ -13,7 +13,7 @@ interface NavBarProps {
 function NavBar({isNavOpen,handleClick}:NavBarProps) {
     const location = useLocation();
     const dispatch = useNavDispatch();
-    const route = useNav();
+    const {route} = useNav();
     const [isHover,setIsHover] = useState(false);
     const [hoverLinkTarget,setHoverLinkTarget] = useState<null | string>(null);
 
@@ -41,7 +41,7 @@ function NavBar({isNavOpen,handleClick}:NavBarProps) {
     ]
 
     const matchRoute = (url:string):string => {
-        if (url.replace('/', '').replace("#", '') === route?.route) {
+        if (url.replace('/', '').replace("#", '') === route) {
             return ' opacity-100'
         } else {
             return ' opacity-0'
