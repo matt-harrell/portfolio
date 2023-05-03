@@ -20,7 +20,7 @@ const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick,
     
 
     return (
-        <nav className="bg-tan mb-3">
+        <nav className="bg-tan mb-3 shadow-md">
             <button onClick={()=>handleClick(isNavOpen)} className="lg:hidden block ml-auto py-2 pr-2">
                 {isNavOpen ?
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8">
@@ -45,7 +45,7 @@ const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick,
                         <Link to={url} className="text-xl" onMouseEnter={() => handleMouseEnter(url)} onMouseLeave={handleMouseLeave}>{title}</Link>
                     }
                     <div 
-                        className={'w-11 h-1 bg-light-blue mx-auto rounded transition-opacity ease-out duration-300' + 
+                        className={'w-11 h-1 bg-light-blue mx-auto rounded transition-opacity ease-out duration-300 shadow-sm' + 
                                     (isHover && url === hoverLinkTarget && matchRoute(url) !== ' opacity-100' ? ' opacity-50' : matchRoute(url))
                                 }
                     >
