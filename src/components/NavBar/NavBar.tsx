@@ -2,17 +2,13 @@
 import React, { useEffect, useState } from 'react'
 import NavBarComp from './NavBarComp'
 import { useLocation } from '@reach/router'
-import { useNav, useNavDispatch } from '../NavContext';
-
-interface NavBarProps {
-    isNavOpen:boolean;
-    handleClick:(isOpen:boolean) => void;
-}
+import { NAV_ACTIONS, useNav, useNavDispatch } from '../NavContext';
 
 
-function NavBar({isNavOpen,handleClick}:NavBarProps) {
+function NavBar() {
     const location = useLocation();
     const dispatch = useNavDispatch();
+    const {isNavOpen} = useNav();
     const {route} = useNav();
     const [isHover,setIsHover] = useState(false);
     const [hoverLinkTarget,setHoverLinkTarget] = useState<null | string>(null);
@@ -56,6 +52,13 @@ function NavBar({isNavOpen,handleClick}:NavBarProps) {
     const handleMouseLeave = () => {
         setIsHover(false);
         setHoverLinkTarget(null)
+    }
+
+    const handleClick = (isOpen:boolean) => {
+        dispatch({
+            type:NAV_ACTIONS.TOGGLE_NAV,
+            payload:isOpen,
+        })
     }
 
     return (

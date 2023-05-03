@@ -10,12 +10,13 @@ const NavContext = createContext<initialStateType>(null!);
 export const NavContextDispatch = createContext<Dispatch<any>>(null!);
 
 interface initialStateType {
-    route:string
+    route:string;
+    isNavOpen:boolean;
 }
 
-// changeed from array to object
 const initialState = {
     route:'/',
+    isNavOpen:false,
 } as initialStateType;
 
 export const NavProvider: React.FC<PropsWithChildren> = ({ children }) => {
@@ -41,10 +42,22 @@ export function useNavDispatch() {
     return useContext(NavContextDispatch);
 }
 
+export const NAV_ACTIONS = {
+    UPDATE:'update',
+    TOGGLE_NAV:'toggleNav',
+    SET_NAV:'setNav',
+}
+
 function navReducer(state:initialStateType, action: { type: string; payload: any; }) {
     switch (action.type) {
-        case 'update':{
+        case NAV_ACTIONS.UPDATE:{
             return {...state,route: action.payload}
+        }
+        case NAV_ACTIONS.TOGGLE_NAV :{
+            return {...state,isNavOpen: !action.payload}
+        }
+        case NAV_ACTIONS.SET_NAV :{
+            return {...state,isNavOpen: action.payload}
         }
         default: {
             throw Error('Unknown action: ' + action.type);

@@ -1,33 +1,29 @@
 import React, { PropsWithChildren, ReactElement, useEffect, useState } from "react";
 import NavBar from "./NavBar/NavBar";
 import { useLocation } from '@reach/router'
+import { NAV_ACTIONS, useNavDispatch } from "./NavContext";
 
 const Layout: React.FC<PropsWithChildren> = ({ children }) => {
 
-    const [isNavOpen,setIsNavOpen] = useState(false);
-
+    // const [isNavOpen,setIsNavOpen] = useState(false);
     const location = useLocation();
+    const dispatch = useNavDispatch();
 
     useEffect(() => {
         closeNav();
     }, [location])
 
-    const handleClick = (isOpen:boolean) => {
-        setIsNavOpen(!isOpen);
-    }
-
     const closeNav = () =>{
-        if(isNavOpen){
-            setIsNavOpen(false);
-        }
+        dispatch({
+            type:NAV_ACTIONS.SET_NAV,
+            payload:false,
+        })
     }
 
     return (
         <>
             <header className="sticky top-0">
                 <NavBar
-                   handleClick={handleClick}
-                   isNavOpen={isNavOpen} 
                 />
             </header>
             <main onClick={closeNav}>
