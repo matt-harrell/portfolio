@@ -18,4 +18,4 @@ const ResumePage: React.FC<PageProps> = () => {
 
 export default ResumePage;
 
-export const Head: HeadFC = () => <title>Resume Page</title>
+export const Head: HeadFC = () => <title>Resume</title>
