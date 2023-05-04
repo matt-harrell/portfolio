@@ -36,11 +36,19 @@ function NavBar() {
         ['Contact', '/#contact'],
     ]
 
-    const matchRoute = (url:string):string => {
+    const toggleOpacity = (url:string):string => {
         if (url.replace('/', '').replace("#", '') === route) {
             return ' opacity-100'
         } else {
             return ' opacity-0'
+        }
+    }
+
+    const toggleBold = (url:string):string => {
+        if (url.replace('/', '').replace("#", '') === route) {
+            return ' font-bold';
+        }else{
+            return '';
         }
     }
 
@@ -66,7 +74,8 @@ function NavBar() {
             navItems={navItems}
             isNavOpen={isNavOpen}
             handleClick={handleClick}
-            matchRoute={matchRoute}
+            toggleOpacity={toggleOpacity}
+            toggleBold={toggleBold}
             isHover={isHover}
             handleMouseEnter={handleMouseEnter}
             hoverLinkTarget={hoverLinkTarget}
