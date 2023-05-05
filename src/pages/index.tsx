@@ -3,6 +3,7 @@ import { HeadFC, PageProps } from "gatsby"
 import Layout from "../components/Layout"
 import { useEffect, useRef } from "react"
 import { NAV_ACTIONS, useNavDispatch } from "../components/NavContext"
+import AboutSection from "../components/AboutSection"
 
 
 
@@ -41,9 +42,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <h1 id='about' className="text-3xl font-bold underline h-screen" ref={aboutSection}>
-        Hello world!
-      </h1>
+      <section id='about' className="md:pt-5 lg:bg-white" ref={aboutSection}>
+        <AboutSection/>
+      </section>
       <div id="projects" className="h-screen pt-16" ref={ProjectSection}>
         projects
       </div>
