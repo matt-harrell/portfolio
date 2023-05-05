@@ -21,7 +21,7 @@ const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick,
     
 
     return (
-        <nav className="bg-tan mb-3 shadow-md">
+        <nav className="bg-tan shadow-md">
             <button onClick={()=>handleClick(isNavOpen)} className="lg:hidden block ml-auto py-2 pr-2">
                 {isNavOpen ?
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
