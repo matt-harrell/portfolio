@@ -22,7 +22,7 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
 
     return (
         <>
-            <header className="sticky top-0">
+            <header className="sticky top-0 z-50">
                 <NavBar
                 />
             </header>
