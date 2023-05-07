@@ -8,7 +8,7 @@ function GreatWaveSVG() {
             width={827}
             height={662}
             viewBox='0 0 827 662'
-            className='max-w-full h-auto drop-shadow-md relative z-0'
+            className='max-w-full h-auto drop-shadow-md relative z-0 animate-fadeInLeft'
         >
             <defs>
                 <linearGradient id="a">

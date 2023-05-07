@@ -30,6 +30,25 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
+      },
+      animation:{
+        fadeInLeft: 'fadeInLeft 1s ease-in',
+        fadeInRight: 'fadeInRight 1s ease-in',
+        fadeInTop: 'fadeInTop 1s ease-in',
+      },
+      keyframes:{
+        fadeInLeft:{
+          '0%':{marginLeft:'-50%', opacity:0},
+          '100%':{marginLeft:'0%',opacity:1}
+        },
+        fadeInRight:{
+          '0%':{marginRight:'-50%', opacity:0},
+          '100%':{marginRight:'0%',opacity:1}
+        },
+        fadeInTop:{
+          '0%':{marginBottom:'-50%', opacity:0},
+          '100%':{marginBottom:'0%',opacity:1}
+        },
       }
     }
   },
