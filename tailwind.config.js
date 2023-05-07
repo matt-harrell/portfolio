@@ -32,22 +32,24 @@ module.exports = {
         '4xl': '2rem',
       },
       animation:{
-        fadeInLeft: 'fadeInLeft 1s ease-in',
-        fadeInRight: 'fadeInRight 1s ease-in',
-        fadeInTop: 'fadeInTop 1s ease-in',
+        fadeInLeft: 'fadeInLeft 1s',
+        fadeInRight: 'fadeInRight 1s',
+        fadeInTop: 'fadeInTop 1s',
       },
       keyframes:{
         fadeInLeft:{
-          '0%':{marginLeft:'-50%', opacity:0},
-          '100%':{marginLeft:'0%',opacity:1}
+          '0%':{transform:'translateX(-50%)', opacity:0},
+          '100%':{transform:'translateX(0%)', opacity:1},
         },
         fadeInRight:{
-          '0%':{marginRight:'-50%', opacity:0},
-          '100%':{marginRight:'0%',opacity:1}
+          '0%':{transform:'translateX(50%)', opacity:0},
+          '25%':{transform:'translateX(50%)', opacity:0},
+          '100%':{transform:'translateX(0%)', opacity:1},
         },
         fadeInTop:{
-          '0%':{marginBottom:'-50%', opacity:0},
-          '100%':{marginBottom:'0%',opacity:1}
+          '0%':{transform:'translateY(50%)', opacity:0},
+          '50%':{transform:'translateY(50%)', opacity:0},
+          '100%':{transform:'translateY(0%)',opacity:1}
         },
       }
     }
