@@ -1,0 +1,10 @@
+
+@media (max-width: 640px) { 
+    .bg-wave{
+        background: url('../images/great\ waves.svg') #fffef7d3;
+        background-blend-mode: overlay;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
