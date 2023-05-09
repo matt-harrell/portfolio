@@ -1,0 +1,77 @@
+{
+    "ContactInfo":{
+        "website":"matt-harrell.github.io",
+        "github":"github.com/matt-harrell",
+        "email":"matthew.h.harrell@gmail.com",
+        "linkedin":"linkedin.com/in/matthharrell",
+        "phone":9108332451
+    },
+    "Skills":[
+        "React",
+        "CSS",
+        "Redux",
+        "Material UI",
+        "TypeScript",
+        "HTML & CSS",
+        "Bootstrap",
+        "Git"
+    ],
+    "Experience":[
+        {
+            "title":"Web Specialist",
+            "company":"Covetrus",
+            "time":"July 2021 - Present",
+            "location":"Remote | Dublin, Ohio",
+            "Resp":[
+                "Developed web pages using HTML, CSS, JavaScript.",
+                "Used various Content Management Systems (CMS) such as WordPress, Pardot, Sitefinity and SAP SmartEdit along with custom code to create and update web pages.",
+                "Debugged websites using Google Chrome Dev Tools.",
+                "Rapidly learned new software to fulfill business needs."
+            ]
+        },
+        {
+            "title":"Web Designer and Developer",
+            "company":"Freelance",
+            "time":"May 2021 - Jul 2021",
+            "location":"Remote",
+            "Resp":[
+                "Designed and developed websites using Wordpress along with custom code.",
+                "Optimized sites to be mobile friendly and have a quick load time.",
+                "Configured hosting and forums."
+            ]
+        },
+        {
+            "title":"Web Developer",
+            "company":"Heartoscope · Internship",
+            "time":"Apr 2021 - May 2021",
+            "location":"Greenville, North Carolina, United States",
+            "Resp":[
+                "Collaborated with a Designer and Content Strategist to translate designs and strategy into a working site.",
+                "Tested Heartoscope.org responsiveness website and made changes to make site responsive.",
+                "Using Google Lighthouse, addressed several audits to make site accessible and mobile optimized while incorporating SEO strategies."
+            ]
+        }
+    ],
+    "Certifications":[
+        {
+            "title":"Front-End Engineer",
+            "link":"https://www.codecademy.com/profiles/matthewHarrell0112636426/certificates/2682884a0719474f96407efe432fdd87",
+            "provider":"Codecademy",
+            "year":"March 2023"
+        }
+    ],
+    "Education":[
+        {
+            "level":"Master of Arts in Interactive Media",
+            "school":"Elon University",
+            "location":"Elon, NC",
+            "year":"May 2021"
+        },
+        {
+            "level":"Bachelor of Arts in Communication Studies",
+            "school":"Campbell University",
+            "location":"Buies Creek, NC",
+            "year":"May 2019"
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+[
+    {
+        "title": {
+            "thumbnail":"Song Profiler",
+            "page":"Song Profiler"
+        },
+        "introSentence":"A React app using song data from Spotify.",
+        "description":"This app shows the users top songs and the Spotify audio profile for each song.This app uses 5 categories to show the audio profile for each song.<br><br><em>Unfortunately Spotify’s API policy does not allow automatic user onboarding for portfolio projects/hobby projects. This means I have to manually add users to the app in order for them to be authenticated through Spotify. If you wish to preview the app please fill out my <a href='./../#contactForm'>contact form</a> and I will add you as a user as soon as possible. </em>",
+        "images":{
+            "thumbnail":"Song profiler logo.jpg"
+        },
+        "video":{
+            "demo":"https://www.youtube.com/embed/fh1XDPrXqdo"
+        },
+        "projectLinks":[
+            {
+            "link":"https://github.com/matt-harrell/song-profiler",
+            "text":"GitHub"
+            }
+        ],
+        "skills":[
+            "React",
+            "Redux",
+            "D3",
+            "Material UI",
+            "API"
+        ]
+    },
+    {
+        "title": {
+            "thumbnail":"DND Encounter Creator",
+            "page":"DND Encounter Creator"
+        },
+        "introSentence":"A React app for Dungeons & Dragons.",
+        "description":"The purpose of this app is to help Dungeon Master's create combat encounters for the board game Dungeons and Dragons without having to perform manual calculations on making the encounter balanced.",
+        "images":{
+            "thumbnail":"DNDappIcon.png",
+            "main":"EcounterCreatorPhone.png"
+        },
+        "projectLinks":[
+            {
+            "link":"https://github.com/matt-harrell/dnd-encounter-creator",
+            "text":"GitHub"
+            },
+            {
+            "link":"https://dnd-encounter-creator.netlify.app/",
+            "text":"DND Encounter Creator"
+            }
+        ],
+        "skills":[
+            "React",
+            "Redux",
+            "Material UI",
+            "API"
+        ]
+    },
+    {
+        "title": {
+            "thumbnail":"PWA",
+            "page":"Progressive Web App"
+        },
+        "introSentence":"A progresive web app (PWA) about herd immunity.",
+        "description":"I created progressive web app or PWA(which is an app created using, HTML, CSS and JavaScript than can run in a browser or any device) that addresses the problem of the reduction of parents vaccinating their children. The desired outcome for this app is to persuade vaccine hesitant parents that vaccines are not just for their children but are needed to protect other children who can’t get vaccinated. Within the app, I used different storytelling techniques and interactive experiences to build to build an empathic argument that vaccines are needed for herd immunity.",
+        "images":{
+            "thumbnail":"herdicon.jpg",
+            "main":"herdphone.png"
+        },
+        "projectLinks":[
+            {
+            "link":"https://github.com/matt-harrell/Have-you-Herd-",
+            "text":"GitHub"
+            },
+            {
+            "link":"https://herd.matthharrell.com/",
+            "text":"Have You Heard?"
+            }
+        ],
+        "skills":[
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap",
+            "SASS",
+            "JQuery",
+            "GreenSock",
+            "Email.js"
+        ]
+    },
+    {
+        "title": {
+            "thumbnail":"WordPress",
+            "page":"WordPress"
+        },
+        "introSentence":"A WordPress website for a non-profit.",
+        "description":"This is a website I created for a nonprofit called Heartoscope, a nonprofit in Greenville, NC, using the Divi, a custom WordPress theme builder. When I was creating this website, I collaborated with a designer and content strategist to translate their designs and strategy into a working website. I also used Google Lighthouse to address several audits to make the website accessible and mobile optimized while incorporating SEO strategies. In order to help the client with managing their website, I also created several YouTube videos to help train the client on how to use Divi.",
+        "images":{
+            "thumbnail":"heartoscope.org.jpg"
+        },
+        "projectLinks":[
+            {
+            "link":"https://heartoscope.org/",
+            "text":"Go to Heartoscope.org"
+            }
+        ],
+        "skills":[
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "WordPress",
+            "Divi"
+        ]
+    },
+    {
+        "title": {
+            "thumbnail":"Interactive Animation",
+            "page":"Interactive Animation"
+        },
+        "introSentence":"A JavaScript interactive animation.",
+        "description":"This is an interactive animation I created that uses counters and conditional statements to create an animation that only occur if certain interactions are completed.",
+        "images":{
+            "thumbnail":"switchCodepen.jpg"
+        },
+        "projectLinks":[
+            {
+            "link":"https://codepen.io/mharrell8/pen/JjKBgrN",
+            "text":"View on CodePen"
+            }
+        ],
+        "skills":[
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "JQuery",
+            "GreenSock"
+        ]
+    }
+]
+
