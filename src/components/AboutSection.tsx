@@ -9,8 +9,8 @@ function AboutSection() {
             <GreatWaveSVG/>
         </div>
         <div className=' md:col-span-6 col-span-full flex flex-col justify-center lg:px-6 md:px-4 px-3 lg:bg-none bg-wave md:py-0 py-6'>
-            <h1 className='lg:text-6xl md:text-5xl text-4xl md:text-left text-center md:animate-fadeInRight'>Matt Harrell</h1>
-            <h1 className='lg:text-5xl md:text-4xl text-3xl md:text-left text-center md:animate-[fadeInRight_1.5s]'>Web Developer</h1>
+            <h1 className='lg:text-6xl text-5xl md:text-left text-center md:animate-fadeInRight md:mb-0 mb-5'>Matt Harrell</h1>
+            <h1 className='lg:text-5xl text-4xl md:text-left text-center md:animate-[fadeInRight_1.5s] md:mb-0 mb-10'>Web Developer</h1>
             <p className='max-w-lg md:animate-[fadeInTop_2s]'>
               I am a focused web developer who specializes in front end development using technologies such as HTML,CSS and JavaScript. I 
               currently work at Covetrus, and use these technologies to build websites and solve problems within the company. During my freetime, 

@@ -10,3 +10,6 @@
     --grey:#BABBBD;
     --black:#000424;
 }
+html{
+    scroll-snap-type:y proximity;
+}
