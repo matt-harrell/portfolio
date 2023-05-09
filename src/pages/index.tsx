@@ -42,13 +42,13 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <section id='about' className="md:pt-5 bg-white h-screen flex flex-col justify-center snap-start" ref={aboutSection}>
+      <section id='about' className="md:pt-5 bg-white min-h-screen flex flex-col justify-center snap-start" ref={aboutSection}>
         <AboutSection/>
       </section>
-      <div id="projects" className="h-screen pt-16 bg-light-blue snap-start" ref={ProjectSection}>
+      <div id="projects" className="min-h-screen pt-16 bg-light-blue snap-start" ref={ProjectSection}>
         projects
       </div>
-      <div id="contact" className="h-screen pt-16 snap-start">
+      <div id="contact" className="min-h-screen pt-16 snap-start">
         contact
       </div>
     </Layout>
