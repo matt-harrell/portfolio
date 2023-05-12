@@ -18,7 +18,7 @@ const config: GatsbyConfig = {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "./src/images/"
+      "path": `${__dirname}/src/images/`
     },
     __key: "images"
   }, {
@@ -28,7 +28,24 @@ const config: GatsbyConfig = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  },"gatsby-plugin-postcss"],
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "content",
+      "path": `${__dirname}/src/content/`
+    }
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "projects",
+      "path": `${__dirname}/src/content/projects/`
+    }
+  },
+  
+  "gatsby-transformer-remark",
+  "gatsby-plugin-postcss"],
   trailingSlash: "never",
 };
 
