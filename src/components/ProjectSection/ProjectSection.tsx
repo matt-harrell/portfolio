@@ -4,9 +4,7 @@ import ProjectsData from '../../data/projects.json';
 
 function ProjectSection() {
   return (
-    <ProjectSectionComp
-      ProjectsData={ProjectsData}
-    />
+    <ProjectSectionComp/>
   )
 }
 
