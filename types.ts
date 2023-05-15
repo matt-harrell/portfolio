@@ -1,3 +1,5 @@
+import { IGatsbyImageData } from "gatsby-plugin-image";
+
 export interface ProjectLinks {
     link:string,
     text:string
@@ -18,4 +20,16 @@ export interface Project{
     },
     projectLinks:ProjectLinks[],
     skills:string[];
+}
+
+export interface ProjectTileNode {
+    id:string,
+    frontmatter:{
+        title:string | null,
+        thumbnail:{
+            childImageSharp:{
+                gatsbyImageData:IGatsbyImageData
+            }
+        }
+    }
 }
