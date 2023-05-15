@@ -1,6 +1,5 @@
 import React from 'react'
 import ProjectSectionComp from './ProjectSectionComp';
-import ProjectsData from '../../data/projects.json';
 import { graphql, useStaticQuery } from 'gatsby';
 
 function ProjectSection() {
