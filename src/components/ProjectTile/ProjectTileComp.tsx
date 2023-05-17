@@ -8,11 +8,21 @@ interface ProjectTileCompProps {
 }
 
 function ProjectTileComp({ node, image }: ProjectTileCompProps) {
+    const maxHeight80 = 'max-h-80';
+    const aspectSquare = 'aspect-square';
+
     return (
-        <GatsbyImage
-            alt=""
-            image={image}
-        />
+        <div className='grid' >
+            <GatsbyImage
+                alt=""
+                image={image}
+                style={{gridArea:'bg-image'}}
+                className={`drop-shadow-lg rounded-lg grid object-cover ${maxHeight80} ${aspectSquare}`}
+            />
+            <div className={`grid relative place-items-center ${maxHeight80} ${aspectSquare}`} style={{gridArea:'bg-image'}}>
+                <h2>{node.frontmatter.title}</h2>
+            </div>
+        </div>
     )
 }
 
