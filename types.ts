@@ -26,6 +26,7 @@ export interface ProjectTileNode {
     id:string,
     frontmatter:{
         title:string | null,
+        introSentence:string,
         thumbnail:{
             childImageSharp:{
                 gatsbyImageData:IGatsbyImageData

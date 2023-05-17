@@ -11,6 +11,7 @@ function ProjectSection() {
         id
         frontmatter {
           title
+          introSentence
           thumbnail {
             childImageSharp {
               gatsbyImageData
