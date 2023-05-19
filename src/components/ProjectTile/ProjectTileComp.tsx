@@ -34,8 +34,12 @@ function ProjectTileComp({ node, image,showWave,handleMouseEnter,handleMouseExit
                     className={`grid relative place-items-center px-5 ${maxHeight80} ${aspectSquare}`}
                     style={{gridArea:'bg-wave'}}
                 >   
-                    <h2>{node.frontmatter.title}</h2>
-                    <p className='self-start'>{node.frontmatter.introSentence}</p>
+                    <h2 className='text-white text-2xl'>
+                        {node.frontmatter.title}
+                    </h2>
+                    <p className='self-start text-white text-xl'>
+                        {node.frontmatter.introSentence}
+                    </p>
                     
                 </div>
             </div>
