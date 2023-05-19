@@ -13,7 +13,7 @@ interface ProjectTileCompProps {
 }
 
 function ProjectTileComp({ node, image,showWave,showProjectTiles,handleMouseEnter,handleMouseExit }: ProjectTileCompProps) {
-    const maxHeight80 = 'max-h-80';
+    const maxHeight80 = 'max-h-96';
     const aspectSquare = 'aspect-square';
     
     return (
