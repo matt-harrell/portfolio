@@ -17,7 +17,15 @@ function ProjectTileComp({ node, image,showWave,showProjectTiles,handleMouseEnte
     const aspectSquare = 'aspect-square';
     
     return (
-        <Link to={`../content/projects/${node.frontmatter.slug}`} className={`grid overflow-y-hidden ${showProjectTiles ? `opacity-100` : "opacity-0"} delay-[${node.frontmatter.order * 1000}ms]`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseExit}>
+        <Link 
+            to={`../content/projects/${node.frontmatter.slug}`} 
+            className={`grid overflow-y-hidden ${showProjectTiles ? "md:opacity-100 md:translate-y-0" : "md:opacity-0 md:translate-y-1/4"}`} 
+            style={{
+                transition:`all .3s ${node.frontmatter.order * .3}s`
+            }}
+            onMouseEnter={handleMouseEnter} 
+            onMouseLeave={handleMouseExit}
+        >
             <GatsbyImage
                 alt=""
                 image={image}
