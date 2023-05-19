@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import { useEffect, useRef } from "react"
 import { NAV_ACTIONS, useNavDispatch } from "../components/NavContext"
 import AboutSection from "../components/AboutSection"
+import ProjectSection from "../components/ProjectSection/ProjectSection"
 
 
 
@@ -15,7 +16,7 @@ const IndexPage: React.FC<PageProps> = () => {
     that should update the route and trigger the blue bar to change
   */
 
-  const ProjectSection = useRef<null | HTMLDivElement>(null);
+  const projectSectionRef = useRef<null | HTMLDivElement>(null);
   const aboutSection = useRef<null | HTMLDivElement>(null);
   const dispatch = useNavDispatch();
 
@@ -28,8 +29,8 @@ const IndexPage: React.FC<PageProps> = () => {
 
   const handleScroll = () => {
     const middleOfScreen = window.innerHeight/4;
-    const projects = ProjectSection.current?.getBoundingClientRect().y || 0;
-    const about = ProjectSection.current?.getBoundingClientRect().y || 0;
+    const projects = projectSectionRef.current?.getBoundingClientRect().y || 0;
+    const about = projectSectionRef.current?.getBoundingClientRect().y || 0;
     
     if (about > middleOfScreen) {
       dispatch({type: NAV_ACTIONS.UPDATE,payload: ''})
@@ -42,13 +43,13 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <section id='about' className="md:pt-5 lg:bg-white" ref={aboutSection}>
+      <section id='about' className="md:pt-5 bg-white min-h-screen flex flex-col justify-center snap-start" ref={aboutSection}>
         <AboutSection/>
       </section>
-      <div id="projects" className="h-screen pt-16" ref={ProjectSection}>
-        projects
+      <div id="projects" className="min-h-screen py-16 bg-light-blue snap-start" ref={projectSectionRef}>
+        <ProjectSection/>
       </div>
-      <div id="contact" className="h-screen pt-16">
+      <div id="contact" className="min-h-screen pt-16 snap-start">
         contact
       </div>
     </Layout>

@@ -12,11 +12,13 @@ export const NavContextDispatch = createContext<Dispatch<any>>(null!);
 interface initialStateType {
     route:string;
     isNavOpen:boolean;
+    showProjectTiles:boolean;
 }
 
 const initialState = {
     route:'/',
     isNavOpen:false,
+    showProjectTiles:false,
 } as initialStateType;
 
 export const NavProvider: React.FC<PropsWithChildren> = ({ children }) => {
@@ -46,6 +48,7 @@ export const NAV_ACTIONS = {
     UPDATE:'update',
     TOGGLE_NAV:'toggleNav',
     SET_NAV:'setNav',
+    SET_SHOW_PROJECT_TILES:'setShowProjectTiles'
 }
 
 function navReducer(state:initialStateType, action: { type: string; payload: any; }) {
@@ -58,6 +61,9 @@ function navReducer(state:initialStateType, action: { type: string; payload: any
         }
         case NAV_ACTIONS.SET_NAV :{
             return {...state,isNavOpen: action.payload}
+        }
+        case NAV_ACTIONS.SET_SHOW_PROJECT_TILES :{
+            return {...state,showProjectTiles: action.payload}
         }
         default: {
             throw Error('Unknown action: ' + action.type);
