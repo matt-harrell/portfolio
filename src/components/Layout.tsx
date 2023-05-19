@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactElement, useEffect, useState } from "react";
+import React, { PropsWithChildren, useEffect } from "react";
 import NavBar from "./NavBar/NavBar";
 import { useLocation } from '@reach/router'
 import { NAV_ACTIONS, useNavDispatch } from "./NavContext";
