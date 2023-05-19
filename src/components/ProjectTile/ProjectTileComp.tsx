@@ -19,7 +19,7 @@ function ProjectTileComp({ node, image,showWave,showProjectTiles,handleMouseEnte
     return (
         <Link 
             to={`../content/projects/${node.frontmatter.slug}`} 
-            className={`grid overflow-y-hidden ${showProjectTiles ? "md:opacity-100 md:translate-y-0" : "md:opacity-0 md:translate-y-1/4"}`} 
+            className={`drop-shadow-md w-fit mx-auto grid overflow-y-hidden ${showProjectTiles ? "md:opacity-100 md:translate-y-0" : "md:opacity-0 md:translate-y-1/4"}`} 
             style={{
                 transition:`all .3s ${node.frontmatter.order * .3}s`
             }}
@@ -30,7 +30,7 @@ function ProjectTileComp({ node, image,showWave,showProjectTiles,handleMouseEnte
                 alt=""
                 image={image}
                 style={{gridArea:'bg-image'}}
-                className={`drop-shadow-lg rounded-lg grid object-cover ${maxHeight80} ${aspectSquare}`}
+                className={`rounded-lg grid object-cover ${maxHeight80} ${aspectSquare}`}
             />
             <div className={`grid relative place-items-center ${maxHeight80} ${aspectSquare} ${showWave ? 'translate-y-0' : 'translate-y-full'} transition-transform`} style={{ gridArea: 'bg-image' }}>
                 <StaticImage
