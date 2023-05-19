@@ -1,25 +1,29 @@
 import React from 'react'
 import { ProjectTileNode } from '../../../types';
 import { GatsbyImage, IGatsbyImageData, StaticImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
 
 interface ProjectTileCompProps {
     node: ProjectTileNode,
-    image: IGatsbyImageData;
+    image: IGatsbyImageData,
+    showWave:boolean,
+    handleMouseEnter: () => void,
+    handleMouseExit: () => void,
 }
 
-function ProjectTileComp({ node, image }: ProjectTileCompProps) {
+function ProjectTileComp({ node, image,showWave,handleMouseEnter,handleMouseExit }: ProjectTileCompProps) {
     const maxHeight80 = 'max-h-80';
     const aspectSquare = 'aspect-square';
 
     return (
-        <div className='grid overflow-y-hidden'>
+        <Link to={`../content/projects/${node.frontmatter.slug}`} className='grid overflow-y-hidden' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseExit}>
             <GatsbyImage
                 alt=""
                 image={image}
                 style={{gridArea:'bg-image'}}
                 className={`drop-shadow-lg rounded-lg grid object-cover ${maxHeight80} ${aspectSquare}`}
             />
-            <div className={`grid relative place-items-center ${maxHeight80} ${aspectSquare}`} style={{ gridArea: 'bg-image' }}>
+            <div className={`grid relative place-items-center ${maxHeight80} ${aspectSquare} ${showWave ? 'translate-y-0' : 'translate-y-full'} transition-transform`} style={{ gridArea: 'bg-image' }}>
                 <StaticImage
                     alt=""
                     src="../../images/index/wave-card.png"
@@ -35,7 +39,7 @@ function ProjectTileComp({ node, image }: ProjectTileCompProps) {
                     
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
