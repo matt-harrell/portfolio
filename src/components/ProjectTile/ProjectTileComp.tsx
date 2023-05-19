@@ -7,16 +7,17 @@ interface ProjectTileCompProps {
     node: ProjectTileNode,
     image: IGatsbyImageData,
     showWave:boolean,
+    showProjectTiles:boolean,
     handleMouseEnter: () => void,
     handleMouseExit: () => void,
 }
 
-function ProjectTileComp({ node, image,showWave,handleMouseEnter,handleMouseExit }: ProjectTileCompProps) {
+function ProjectTileComp({ node, image,showWave,showProjectTiles,handleMouseEnter,handleMouseExit }: ProjectTileCompProps) {
     const maxHeight80 = 'max-h-80';
     const aspectSquare = 'aspect-square';
-
+    
     return (
-        <Link to={`../content/projects/${node.frontmatter.slug}`} className='grid overflow-y-hidden' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseExit}>
+        <Link to={`../content/projects/${node.frontmatter.slug}`} className={`grid overflow-y-hidden ${showProjectTiles ? `opacity-100` : "opacity-0"} delay-[${node.frontmatter.order * 1000}ms]`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseExit}>
             <GatsbyImage
                 alt=""
                 image={image}
