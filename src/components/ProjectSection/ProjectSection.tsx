@@ -54,7 +54,7 @@ function ProjectSection() {
     }
     return () => {
       if (projectSectionRef.current) {
-         observer.unobserve(projectSectionRef.current)
+         observer.disconnect()
       }
     }
   }, [projectSectionRef,options])
