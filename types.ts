@@ -25,6 +25,7 @@ export interface Project{
 export interface ProjectTileNode {
     id:string,
     frontmatter:{
+        order:number,
         title:string | null,
         introSentence:string,
         slug:string,
