@@ -18,7 +18,7 @@ function ProjectTileComp({ node, image,showWave,showProjectTiles,handleMouseEnte
     
     return (
         <Link 
-            to={`../content/projects/${node.frontmatter.slug}`} 
+            to={`../projects/${node.frontmatter.slug}`} 
             className={`drop-shadow-md w-fit mx-auto grid overflow-y-hidden ${showProjectTiles ? "md:opacity-100 md:translate-y-0" : "md:opacity-0 md:translate-y-1/4"}`} 
             style={{
                 transition:`all .3s ${node.frontmatter.order * .3}s`
