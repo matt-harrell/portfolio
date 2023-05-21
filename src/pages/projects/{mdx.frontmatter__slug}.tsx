@@ -38,7 +38,7 @@ const ProjectPage = ({data,children}:PageProps<data>) => {
           {title}
         </h1>
 
-        <div className="grid md:grid-cols-2">
+        <div className="grid md:grid-cols-2 gap-10">
           <article>
             {video !== null ?
               <iframe width="560" height="315"
@@ -52,16 +52,21 @@ const ProjectPage = ({data,children}:PageProps<data>) => {
               <GatsbyImage
                 alt=""
                 image={mainImage}
+                className="min-w-full h-auto"
               />
               :
               <GatsbyImage
                 alt=""
                 image={thumbnailImage}
+                className="min-w-full h-auto"
               />
             }
           </article>
 
           <article>
+            <h2 className="text-4xl font-bold text-center mb-5">
+              Description
+            </h2>
             {children}
           </article>
         </div>
