@@ -29,10 +29,7 @@ const ProjectPage = ({data,children}:PageProps<data>) => {
   const {skills,title,projectLinks,main,thumbnail,video} = data.mdx.frontmatter;
 
   const mainImage = getImage(main) as IGatsbyImageData;
-  const thumbnailImage = getImage(thumbnail) as IGatsbyImageData;
-
-  console.log(main);
-  
+  const thumbnailImage = getImage(thumbnail) as IGatsbyImageData;  
 
   return (
     <Layout>
