@@ -37,13 +37,13 @@ const ProjectPage = ({data,children}:PageProps<data>) => {
 
   return (
     <Layout>
-      <section className="container lg:px-10 md:px-5 px-2 mx-auto pb-10">
+      <section className="container lg:px-10 md:px-5 px-3 mx-auto pb-10 mt-16">
         <h1 className="text-6xl text-center font-semibold my-10">
           {title}
         </h1>
 
         <div className="grid md:grid-cols-2 gap-10">
-          <article>
+          <article className="md:animate-[growIn_.5s] md:order-first order-last">
             {video !== null ?
               <iframe width="560" height="315"
                 src={video}
@@ -68,7 +68,7 @@ const ProjectPage = ({data,children}:PageProps<data>) => {
             }
           </article>
 
-          <article>
+          <article className="md:animate-[growIn_.8s] md:order-last order-first">
             <h2 className="text-4xl font-bold text-center mb-5">
               Description
             </h2>
