@@ -1,5 +1,5 @@
 import React from 'react'
-import GreatWaveSVG from './GreatWaveSVG';
+import GreatWaveSVG from './SVGs/GreatWaveSVG';
 import '../styles/index.css'
 
 function AboutSection() {

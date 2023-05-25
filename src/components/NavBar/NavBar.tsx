@@ -21,10 +21,10 @@ function NavBar() {
                 payload:url[url.length - 1]
             })
         } else {
-            const url = window.location.href.split('/');
+            const url = window.location.href.split('/');     
             dispatch({
                 type:'update',
-                payload:url[url.length - 1]
+                payload:url[3]
             })
         }
     }, [location])

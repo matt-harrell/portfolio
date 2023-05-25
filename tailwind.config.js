@@ -35,6 +35,7 @@ module.exports = {
         fadeInLeft: 'fadeInLeft 1s',
         fadeInRight: 'fadeInRight 1s',
         fadeInTop: 'fadeInTop 1s',
+        growIn: 'growIn 1s',
       },
       keyframes:{
         fadeInLeft:{
@@ -51,6 +52,11 @@ module.exports = {
           '50%':{transform:'translateY(50%)', opacity:0},
           '100%':{transform:'translateY(0%)',opacity:1}
         },
+        growIn:{
+          '0%':{transform:'scale(75%)', opacity:0},
+          '50%':{transform:'scale(75%)', opacity:0},
+          '100%':{transform:'scale(100%)',opacity:1}
+        }
       }
     }
   },
