@@ -1,7 +1,7 @@
 import * as React from "react"
 import { HeadFC, PageProps, graphql } from "gatsby"
 import Layout from "../../components/Layout"
-import { GatsbyImage, IGatsbyImageData, StaticImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData, getImage } from "gatsby-plugin-image"
 import GitHubSVG from "../../components/SVGs/GitHubSVG";
 import ExternalLinkSVG from "../../components/SVGs/ExternalLinkSVG";
 
@@ -105,7 +105,7 @@ const ProjectPage = ({data,children}:PageProps<data>) => {
             <h2 className="text-4xl font-bold text-center mb-5">
               Skills
             </h2>
-            <p className=" text-center text-2xl">
+            <p className="text-center text-2xl">
               {skills.split(',').join(' | ')}
             </p>
           </article>
