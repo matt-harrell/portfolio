@@ -4,6 +4,7 @@ import Layout from "../../components/Layout"
 import { GatsbyImage, IGatsbyImageData, getImage } from "gatsby-plugin-image"
 import GitHubSVG from "../../components/SVGs/GitHubSVG";
 import ExternalLinkSVG from "../../components/SVGs/ExternalLinkSVG";
+import SEO from "../../components/SEO";
 
 interface data {
   mdx: {
@@ -11,6 +12,7 @@ interface data {
       skills: string;
       projectLinks: string;
       title: string;
+      introSentence:string;
       video: string | null;
       thumbnail: {
         childImageSharp: {
@@ -134,12 +136,18 @@ export const query = graphql`
           }
         }
         title
+        introSentence
         video
       }
     }
   }
   `
 
-export const Head: HeadFC<data> = ({data}) => <title>{data.mdx.frontmatter.title}</title>
+export const Head: HeadFC<data> = ({data}) => (
+  <SEO
+    title={data.mdx.frontmatter.title}
+    description={data.mdx.frontmatter.introSentence}
+  />
+)
 
 export default ProjectPage;

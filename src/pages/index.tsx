@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react"
 import { NAV_ACTIONS, useNavDispatch } from "../components/NavContext"
 import AboutSection from "../components/AboutSection"
 import ProjectSection from "../components/ProjectSection/ProjectSection"
+import SEO from "../components/SEO"
 
 
 
@@ -59,4 +60,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Matt Harrell</title>
+export const Head: HeadFC = () => (
+  <SEO/>
+)
