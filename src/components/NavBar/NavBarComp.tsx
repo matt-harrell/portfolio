@@ -39,8 +39,8 @@ const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick,
                 {navItems.map(([title, url]) => (
                     <div key={title} className={"py-3 px-5 lg:text-left text-center" + (isHover && url === hoverLinkTarget ? " font-bold" : toggleBold(url))}>
                         {url.includes("#") && window.location.pathname === '/' ? 
-                            <ScrollLink to={url.replace('/','').replace('#','')} smooth={true} duration={300} className="text-xl cursor-pointer" onMouseEnter={() => handleMouseEnter(url)} onMouseLeave={handleMouseLeave}>{title}</ScrollLink> :
-                            <Link to={url} className="text-xl" onMouseEnter={() => handleMouseEnter(url)} onMouseLeave={handleMouseLeave}>{title}</Link>
+                            <ScrollLink to={url.replace('/','').replace('#','')} smooth={true} duration={300} offset={-300} className="text-xl cursor-pointer" onMouseEnter={() => handleMouseEnter(url)} onMouseLeave={handleMouseLeave} onClick={()=>handleClick(isNavOpen)}>{title}</ScrollLink> :
+                            <Link to={url} className="text-xl" onMouseEnter={() => handleMouseEnter(url)} onMouseLeave={handleMouseLeave} onClick={()=>handleClick(isNavOpen)}>{title}</Link>
                         }
                         <div 
                             className={'w-11 h-1 bg-light-blue rounded transition-opacity ease-out duration-300 shadow-sm mx-auto' + 
