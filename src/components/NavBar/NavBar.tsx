@@ -32,7 +32,6 @@ function NavBar() {
     const navItems = [
         ['About', '/'],
         ['Projects', '/#projects'],
-        ['Resume', '/resume'],
         ['Contact', '/#contact'],
     ]
 
