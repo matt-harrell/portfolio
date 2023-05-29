@@ -11,7 +11,7 @@ interface ProjectTile {
 function ProjectTile({ node }: ProjectTile) {
     const image = getImage(node.frontmatter.thumbnail) as IGatsbyImageData
     const [showWave,setShowWave] = useState(false);
-    const {showProjectTiles} = useNav();
+    const {showProjectTiles} = useNav() || false;
 
     const handleMouseEnter = () => {
         setShowWave(true);

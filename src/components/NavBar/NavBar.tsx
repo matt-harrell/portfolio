@@ -8,10 +8,16 @@ import { NAV_ACTIONS, useNav, useNavDispatch } from '../NavContext';
 function NavBar() {
     const location = useLocation();
     const dispatch = useNavDispatch();
-    const {isNavOpen} = useNav();
-    const {route} = useNav();
+    const {isNavOpen} = useNav() || false;
+    const {route} = useNav() || '/';
     const [isHover,setIsHover] = useState(false);
     const [hoverLinkTarget,setHoverLinkTarget] = useState<null | string>(null);
+    const windowLocation = useLocation();
+
+    useEffect(() => {
+        console.log(windowLocation);
+        
+    },[])
 
     useEffect(() => {
         if (window.location.href.includes('#')) {
@@ -76,6 +82,7 @@ function NavBar() {
             toggleOpacity={toggleOpacity}
             toggleBold={toggleBold}
             isHover={isHover}
+            windowLocation={windowLocation}
             handleMouseEnter={handleMouseEnter}
             hoverLinkTarget={hoverLinkTarget}
             handleMouseLeave={handleMouseLeave}
