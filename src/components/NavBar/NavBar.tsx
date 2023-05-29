@@ -15,11 +15,6 @@ function NavBar() {
     const windowLocation = useLocation();
 
     useEffect(() => {
-        console.log(windowLocation);
-        
-    },[])
-
-    useEffect(() => {
         if (window.location.href.includes('#')) {
             const url = window.location.href.split('#');
             dispatch({
