@@ -42,6 +42,9 @@ const config: GatsbyConfig = {
   "gatsby-transformer-remark",
   "gatsby-plugin-postcss"],
   trailingSlash: "never",
+  flags: {
+    DEV_SSR: true,
+  },
 };
 
 export default config;
