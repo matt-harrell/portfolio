@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
     title: `Matt Harrell`,
     description:'Matt Harrell’s Portfolio showcasing all of his work over the years. Check it out!',
     image:`/icon.png`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://matt-harrell.dev`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
