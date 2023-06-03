@@ -12,13 +12,14 @@ interface NavBarCompProps {
     isHover:boolean;
     hoverLinkTarget:string | null;
     handleMouseLeave:() => void;
-    windowLocation: any
+    windowLocation: any;
+    offset:number;
 }
 
 // presentional component for the nav bar
 // TODO: create nav links
 // have it so blue line moves when new page/url is selected
-const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick,toggleOpacity,toggleBold,handleMouseEnter,isHover,hoverLinkTarget,handleMouseLeave, windowLocation }: NavBarCompProps) => {
+const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick,toggleOpacity,toggleBold,handleMouseEnter,isHover,hoverLinkTarget,handleMouseLeave, windowLocation, offset }: NavBarCompProps) => {
     
 
     return (
@@ -40,7 +41,7 @@ const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick,
                 {navItems.map(([title, url]) => (
                     <div key={title} className={"py-3 px-5 lg:text-left text-center" + (isHover && url === hoverLinkTarget ? " font-bold" : toggleBold(url))}>
                         {url.includes("#") && windowLocation.pathname === '/' ? 
-                            <ScrollLink to={url.replace('/','').replace('#','')} smooth={true} duration={300} offset={-300} className="text-xl cursor-pointer" onMouseEnter={() => handleMouseEnter(url)} onMouseLeave={handleMouseLeave} onClick={()=>handleClick(isNavOpen)}>{title}</ScrollLink> :
+                            <ScrollLink to={url.replace('/','').replace('#','')} smooth={true} duration={300} offset={offset} className="text-xl cursor-pointer" onMouseEnter={() => handleMouseEnter(url)} onMouseLeave={handleMouseLeave} onClick={()=>handleClick(isNavOpen)}>{title}</ScrollLink> :
                             <Link to={url} className="text-xl" onMouseEnter={() => handleMouseEnter(url)} onMouseLeave={handleMouseLeave} onClick={()=>handleClick(isNavOpen)}>{title}</Link>
                         }
                         <div 

@@ -13,6 +13,7 @@ function NavBar() {
     const [isHover,setIsHover] = useState(false);
     const [hoverLinkTarget,setHoverLinkTarget] = useState<null | string>(null);
     const windowLocation = useLocation();
+    const [offset,setOffset] = useState<number>(-300);
 
     useEffect(() => {
         if (window.location.href.includes('#')) {
@@ -29,6 +30,19 @@ function NavBar() {
             })
         }
     }, [location])
+
+    useEffect(() =>{
+        const handleResize = () => {
+            if (window.innerWidth < 1024) {
+                setOffset(-300);
+            } else {
+                setOffset(0);
+            }
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    },[])
 
     const navItems = [
         ['About', '/'],
@@ -77,6 +91,7 @@ function NavBar() {
             toggleOpacity={toggleOpacity}
             toggleBold={toggleBold}
             isHover={isHover}
+            offset={offset}
             windowLocation={windowLocation}
             handleMouseEnter={handleMouseEnter}
             hoverLinkTarget={hoverLinkTarget}
