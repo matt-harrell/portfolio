@@ -86,7 +86,10 @@ const ProjectPage = ({data,children}:PageProps<data>) => {
                       className="underline text-dark-blue hover:text-light-blue"
                       key={index}
                     >
-                      <GitHubSVG />
+                      <GitHubSVG
+                        width={50}
+                        height={51}
+                      />
                     </a>
                   )
                 } else {
