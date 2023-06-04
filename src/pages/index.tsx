@@ -6,6 +6,7 @@ import { NAV_ACTIONS, useNavDispatch } from "../components/NavContext"
 import AboutSection from "../components/AboutSection"
 import ProjectSection from "../components/ProjectSection/ProjectSection"
 import SEO from "../components/SEO"
+import ContactSection from "../components/ContactSection"
 
 
 
@@ -50,8 +51,8 @@ const IndexPage: React.FC<PageProps> = () => {
       <div id="projects" className="min-h-screen py-16 bg-light-blue snap-start" ref={projectSectionRef}>
         <ProjectSection/>
       </div>
-      <div id="contact" className="min-h-screen pt-16 snap-start">
-        contact
+      <div id="contact" className="pt-16 bg-light-blue min-h-screen snap-start flex flex-col justify-center">
+        <ContactSection/>
       </div>
     </Layout>
 
