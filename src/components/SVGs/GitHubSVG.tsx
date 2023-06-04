@@ -1,11 +1,15 @@
 import * as React from "react"
-import { SVGProps } from "react"
-const GitHubSVG = (props: SVGProps<SVGSVGElement>) => (
+
+interface GitHubSVGProps {
+  width:number;
+  height:number;
+}
+
+const GitHubSVG = ({width,height}:GitHubSVGProps) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
-    width={50} 
-    height={51} 
-    {...props} 
+    width={width} 
+    height={height}  
     viewBox="0 0 98 96" 
     className="hover:scale-125 transition-transform"
     >
