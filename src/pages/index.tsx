@@ -51,7 +51,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <div id="projects" className="min-h-screen py-16 bg-light-blue snap-start" ref={projectSectionRef}>
         <ProjectSection/>
       </div>
-      <div id="contact" className="pt-16 bg-light-blue min-h-screen snap-start flex flex-col justify-center">
+      <div id="contact" className="pt-16 bg-light-blue min-h-screen snap-start flex flex-col justify-center items-center">
         <ContactSection/>
       </div>
     </Layout>
