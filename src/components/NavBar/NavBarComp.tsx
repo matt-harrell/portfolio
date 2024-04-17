@@ -54,7 +54,7 @@ const NavBarComp: React.FC<NavBarCompProps> = ({ navItems,isNavOpen,handleClick,
                 ))}
                 </div>
                 <a 
-                    href="/Matt_Harrell_Resume.pdf" 
+                    href="https://docs.google.com/document/d/1_htRFYtk2WEscI7PuEArvUtd_6REqmXm1jizjv0N9ag/export?format=pdf&attachment=false" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-xl block lg:mx-5 mx-auto my-auto px-4 py-1 rounded-lg bg-light-blue text-white drop-shadow-sm hover:drop-shadow-lg hover:scale-110 duration-200 ease-in w-fit"

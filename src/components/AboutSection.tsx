@@ -12,9 +12,7 @@ function AboutSection() {
             <h1 className='lg:text-6xl text-5xl md:text-left text-center md:animate-fadeInRight md:mb-0 mb-5'>Matt Harrell</h1>
             <h1 className='lg:text-5xl text-4xl md:text-left text-center md:animate-[fadeInRight_1.5s] md:mb-0 mb-10'>Web Developer</h1>
             <p className='max-w-lg md:animate-[fadeInTop_2s]'>
-              I am a focused web developer who specializes in front end development using technologies such as HTML,CSS and JavaScript. I 
-              currently work at Covetrus, and use these technologies to build websites and solve problems within the company. During my freetime, 
-              I work to grow my web development skill set with side projects. Additionally, I have taught myself React and have used it in a couple of projects. 
+            Meticulous Web Developer holding a Master of Arts in Interactive Media with over two years of experience in providing high-caliber coding solutions, web development, and executing software development lifecycle. Highly knowledgeable in React, JavaScript, CSS, and HTML, and leveraging those technologies to solve problems.
             </p>
         </div>
     </div>

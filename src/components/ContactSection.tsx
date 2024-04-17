@@ -44,7 +44,7 @@ function ContactSection() {
         </div>
       </div>
       <a
-        href="/Matt_Harrell_Resume.pdf"
+        href="https://docs.google.com/document/d/1_htRFYtk2WEscI7PuEArvUtd_6REqmXm1jizjv0N9ag/export?format=pdf&attachment=false"
         target="_blank"
         rel="noopener noreferrer"
         className="mx-auto my-10 block w-fit rounded-lg bg-tan px-4 py-1 text-3xl text-black drop-shadow-sm duration-200 ease-in hover:scale-110 hover:drop-shadow-lg"
